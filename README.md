@@ -30,6 +30,20 @@ botがボイスチャンネルに参加した状態でメッセージを送る�
 3. 作成したDiscordをDiscordのチャンネルに招待する。
 4. Discordのbotのトークンを取得する。
 5. `settings/settings.json`の`BOT_TOKEN`に取得したトークンを設定する。
+6. `settings/settings.json`の`Speakers`を設定する。
+    (`Speaker_ID_*`, `Speaker's Name` をそれぞれ、そのキャラのID, 名前に置き換えること)
+    ```
+    ex. 
+    {
+        "BOT_TOKEN": "YOUR_DISCORD_BOT_TOKEN",
+        "Speakers": {
+            "2": "四国めたん",
+            "3": "ずんだもん",
+            ...
+        }
+    }
+    ```
+    ID, 名前は、[VOICEVOXのGithub](https://github.com/VOICEVOX/voicevox_engine)の`HTTP リクエストで音声合成するサンプルコード`にある内容をみるとどのキャラがどの数字に割り当てられているのかがわかる。(`styles`の`id`が対応している)
 
 
 **クローン&必要なライブラリ類のインストール**
