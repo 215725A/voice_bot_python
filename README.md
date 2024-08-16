@@ -110,7 +110,10 @@ Please Type random or select
 **selectを返信した場合**
 ```
 Please select one of the numbers below and enter the number.
-[2, 3, 8, 9, 10, 11, 12, 13, 14, 16, 20, 21, 23, 27, 28, 29, 42, 43, 46, 47, 51, 52, 53, 54, 55, 58]
+Speakers Info:
+ID: num, Speaker: Speaker Name
+ID: num, Speaker: Speaker Name
+...
 ```
 と返信されるので、この数字の中から好きな数字を選んで返信する。  
 そうすると、その選択したキャラクターに変更する。  
