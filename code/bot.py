@@ -14,6 +14,8 @@ json_path = "../settings/settings.json"
 read_setting = open(json_path, 'r')
 setting = json.load(read_setting)
 
+speakers = setting['Speakers']
+
 voice_vox = VOICE_VOX()
 process_message_command = [False]
 
@@ -40,7 +42,7 @@ async def on_message(message):
     
     await leave_voice_channel(client, message)
     
-    await change_voice_speaker(client, voice_vox, message, process_message_command)
+    await change_voice_speaker(client, voice_vox, message, process_message_command, speakers)
 
     if message.content in skip_massage:
         return

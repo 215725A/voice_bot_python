@@ -24,7 +24,7 @@ async def leave_voice_channel(client, message):
             await message.guild.voice_client.disconnect()
             return
 
-async def change_voice_speaker(client, voice_vox, message, process_message_command):
+async def change_voice_speaker(client, voice_vox, message, process_message_command, speakers):
     if message.content == '!change':
         process_message_command[0] = True
         await message.reply("Please Type random or select")
@@ -38,9 +38,10 @@ async def change_voice_speaker(client, voice_vox, message, process_message_comma
             await message.reply(f"{message.author.mention} Operation Timed Out")
         else:
             if msg.content == 'select':
+                speakers_info_text = f"Speakers Info: \n" + "\n".join([f"ID: {key}, Speaker: {value}" for key, value in speakers.items()])
                 await message.reply(f"""
 Please select one of the numbers below and enter the number.
-{voice_vox.speaker_ids}
+{speakers_info_text}
 """)
                 def check_num(num):
                     try:
