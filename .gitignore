@@ -1,0 +1,4 @@
+settings/settings.json
+outputs/*.wav
+memo.md
+__pycache__
